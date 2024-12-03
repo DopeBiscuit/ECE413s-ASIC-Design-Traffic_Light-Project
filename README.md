@@ -1,4 +1,4 @@
-<div align="center"><img src="cover.png" alt="ASIC Logo" width="450" height="450"/></div><hr>
+<div align="center"><img src="cover.jpg" alt="ASIC Logo" width="600" height="400"/></div><hr>
 
 <div align="center"><H1> Smart Traffic Light System (ASIC)</H1></div>
 Design flow of an Application Specific Integrated Circuit (ASIC) that implements a smart traffic light system aiming to minimize wait time for all drivers while minimizing accident risk.
@@ -38,3 +38,11 @@ This project is licensed under the MIT License. For more information, please ref
 Special thanks to our course instructors, **Dr. Diaa Eldin Khalil** and **Eng. Alaa Salah** for their guidance and support, as well as a special thanks to the Verilog community, for their valuable resources and support.
 
 
+## ✨ Team Members ✨
+
+<div align="center">
+<table style="margin-left: auto; margin-right: auto;">
+<tr>
+    <td align="center"><a href="https://github.com/DopeBiscuit"><img src="https://avatars.githubusercontent.com/DopeBiscuit?v=4&s=100" width="100" height="100" style="border-radius:50%" alt="DopeBiscuit"/><br /><sub>DopeBiscuit</sub></a></td>
+    <td align="center"><a href="https://github.com/AyaTarekS"><img src="https://avatars.githubusercontent.com/u/159694974?v=4" width="100" height="100" style="border-radius:50%" alt="AyaTarekS"/><br /><sub>AyaTarekS</sub></a></td>
+</tr>
