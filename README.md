@@ -63,13 +63,13 @@ Smart Traffic System
 <div align="center">
 <table><th>Combination</th><th>State</th>
     <tr>
-        <td>(001)</td> <td>Red</td>
+        <td>(001)</td> <td><p style="color:red;">Red</p></td>
     </tr>
     <tr>
-        <td>(010)</td> <td>Yellow</td>
+        <td>(010)</td> <td><p style="color:yellow;">Yellow</p></td>
     </tr>
     <tr>
-        <td>(100)</td> <td>Green</td>
+        <td>(100)</td> <td><p style="color:green;">Green</p></td>
     </tr>
 </table>
 </div>
