@@ -12,20 +12,43 @@ The project goes through various phases till completion:
   
 * [**Light Algorithm:**](#light-algorithm)    Flowchart and pseudocode for the designed algorithm for the traffic lights that allows for minimum accident risk and maximum traffic time utilization.
 
-* **Controller Specs:**   Planning the architecture and logic of the traffic controller and how it interfaces with the traffic lights to give them orders.
+* [**Controller Specs:**](#controller-specs)   Planning the architecture and logic of the traffic controller and how it interfaces with the traffic lights to give them orders.
 
-* **FSM Design:**         Creating schematic and state table for the finalized state machine that enables our traffic lights using inputs from the controller.
+* [**FSM Design:** ](#fsm-design)        Creating schematic and state table for the finalized state machine that enables our traffic lights using inputs from the controller.
 
-* **Simulation:**         The Verilog code for the design with the synthesis schematic of the RTL code, as well as snapshots of the waveform diagrams.
+* [**Simulation:**](#simulation)         The Verilog code for the design with the synthesis schematic of the RTL code, as well as snapshots of the waveform diagrams.
 
-* **Test Bench:**         The verification test written for the design to check correct functionality and provide the proposed test strategy to ensure all cases are tested.
+* [**Test Bench:**](#test-bench)         The verification test written for the design to check correct functionality and provide the proposed test strategy to ensure all cases are tested.
 
 ## Disclaimer
 
 It's important to note that this implementation may not follow all best practices and may not be the most efficient or optimal solution. As an educational project, We relied on our own creativity and problem-solving skills to overcome hurdles along the way. While the IC is functional and capable of doing its task, there is always room for improvement in terms of performance, efficiency, and design.
 
----
 
+## Repository Structure
+
+The repository is organized as follows:
+
+```
+Smart Traffic System
+├── assets                      # Directory containing image assets for the readme
+|
+├── work                        # Directory contains the System Verilog code files for the modules
+|   |
+|   ├── trafficSystem.sv        # Top-Level module of the smart traffic system
+|   ├── controller.sv           # Module responsible for the states of the traffic lights
+|   └──  trafficLight.sv        # Module of the traffic light
+| 
+├── tests                       # Directory containing testbenches for each module
+|   |
+│   ├── trafficSystem_tb.sv     # Testbench for the top-level module
+|   ├── controller_tb.sv        # Testbench for the controller module
+|   └── trafficLight_tb.sv      # Testbench for the traffic light module
+|
+├── README.md                   # Documentation file (you're reading it right now)
+└── LICENSE                     # License file (MIT License)
+```
+<br>
 <div align="center"><H1>Design Flow</H1></div>
 
 ## System Design
@@ -73,8 +96,6 @@ It's important to note that this implementation may not follow all best practice
 ## Light Algorithm
 Propsed light algorithm:
 
-<img style="float:right" src="./assets/simple flowchart_bg.png" height="507" width="300"/>
-
 ```c++
     
 // Always loop on streets anti-clockwise starting f
@@ -99,11 +120,21 @@ Propsed light algorithm:
         Next street
  }
 ```
-<div>
-As we can see, the proposed algorithm iterates over all streets counterclockwise and checks if there is traffic to turn on the traffic light, if the street is congested, it gives it even extra traffic time.
-This ensures that streets with no traffic gets no traffic time, and streets with high traffic get maximum traffic time, thus, this respects the 2nd constraint of our system which is to maximize fairness to all drivers by making the traffic time function of the sensor values.
 
-</div>
+  - As we can see, the proposed algorithm iterates over all streets counterclockwise and checks if there is traffic to turn on the traffic light, if the street is congested, it gives it even extra traffic time.
+
+-   This ensures that streets with no traffic gets no traffic time, and streets with high traffic get maximum traffic time, thus, this respects the 2nd constraint of our system which is to maximize fairness to all drivers by making the traffic time function of the sensor values.
+
+## Controller Specs
+
+## FSM Design
+Since we have already established that no more than 1 traffic light will be on at the same time, and since we have created our light algorithm to go to the next traffic light only when the previous one turns off, we can see that the state of each traffic light is only a function of the 3-bit input given by the controller.
+
+**This infers a Moore state machine.**
+
+## Simulation
+
+## Test Bench
 
 ## Contributing
 
