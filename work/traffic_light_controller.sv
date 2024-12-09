@@ -129,7 +129,7 @@ end
 always @(posedge clk or negedge rst_n) begin
     if (~rst_n) begin
         cs <= T1G;
-    end else begin
+    end     else begin
         cs <= ns;
     end
 end
