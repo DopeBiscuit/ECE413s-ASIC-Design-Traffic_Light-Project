@@ -196,16 +196,17 @@ always @(posedge clk or negedge rst_n) begin
                 green   = 4'b0000;
                 red = 4'b1111;
                 yellow  = 4'b0;
-            end]
+            end
         endcase
     end
 end
 
 // 2 -> 3 -> 0 -> 1
 task bounce_achieved (input [1:0] t_num, output reg result);
-    integer i = (t_num + 1) % 4;
+    integer i;
     integer j;
-        begin: loop
+    i = (t_num + 1) % 4;
+    begin
         result = 0; 
         for (j = 0; j < 3; j = j + 1) begin
                 // Check 1st sensor
@@ -213,24 +214,25 @@ task bounce_achieved (input [1:0] t_num, output reg result);
                     // if sensor is on, then bounce is achieved
                     if (fs[i]) 
                         result = 1;
-                    disable loop;
+                    j = 3;
                 end
             // Move to next sensor
-            i = (i + 1) % 4
+            i = (i + 1) % 4;
         end
-        end
+    end 
 endtask
 
-task light_color(input [1:0] t_num, input color);
-    integer i; 
+task light_color(input [1:0] t_num, input color); 
 begin
+    integer i;
     if (color == 0) begin
         red    = 4'b1111;
         green  = 4'b0000;
         yellow = 4'b0000;
         yellow[t_num] = 1;
         red[t_num] = 0;
-    end else begin
+    end 
+    else begin
         // red
         red = 4'b1111; 
         red[t_num] = 0;
