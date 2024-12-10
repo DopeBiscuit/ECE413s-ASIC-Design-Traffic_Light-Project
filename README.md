@@ -35,9 +35,9 @@ Smart Traffic System
 |
 ├── work                        # Directory contains the System Verilog code files for the modules
 |   |
-|   ├── trafficSystem.sv        # Top-Level module of the smart traffic system
-|   ├── controller.sv           # Module responsible for the states of the traffic lights
-|   └──  trafficLight.sv        # Module of the traffic light
+|   ├── traffic_system.v        # Top-Level module of the smart traffic system
+|   ├── traffic_light_controller.v           # Module responsible for the states of the traffic lights
+|   └──  traffic_light.v        # Module of the traffic light
 | 
 ├── tests                       # Directory containing testbenches for each module
 |   |
@@ -132,9 +132,22 @@ Since we have already established that no more than 1 traffic light will be on a
 
 **This infers a Moore state machine.**
 
+![State Diagram](./assets/state_diagram.jpg)
+
+
+-   The state machine consists of 8 distinct states, 2 states for each traffic light, The starting state is TG1, which is the green light state of traffic light 1, each traffic light has TGx and TYx where x in the number of the traffic light.
+
+-   Once a traffic light is lit green it can only transition to the yellow state of the same traffic light. From there after completing the yellow timer, the controller checks in indexing order for the next traffic light that has congestion and transitions to its green state, this causes the previously turned on traffic light to turn red.	
+
+![alt text](./assets/encoding.png)
+- As visible in previous figure, the states got a more efficient encoding by the tool to optimize transitions, an important note is that there are no explicit states for red light, since it is the default mode of a traffic light and is only changed when the current state is either the green or yellow state of that traffic light.
+
 ## Simulation
 
 ## Test Bench
+To test the validity of the design test benches were made that employ various input scenarios to the traffic light system and measure its response to check for any errors.
+
+
 
 ## Contributing
 
