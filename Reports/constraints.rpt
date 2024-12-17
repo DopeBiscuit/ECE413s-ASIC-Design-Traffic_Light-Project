@@ -1,0 +1,13 @@
+Warning: Design 'traffic_system' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : traffic_system
+Version: K-2015.06
+Date   : Wed Dec 18 02:16:27 2024
+****************************************
+
+This design has no violated constraints.
+
+1

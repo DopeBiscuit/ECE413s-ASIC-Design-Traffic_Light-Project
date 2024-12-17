@@ -1,0 +1,46 @@
+Warning: Design 'traffic_system' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : area
+Design : traffic_system
+Version: K-2015.06
+Date   : Wed Dec 18 02:16:27 2024
+****************************************
+
+Library(s) Used:
+
+    No libraries used.
+
+Number of ports:                           22
+Number of nets:                            42
+Number of cells:                            5
+Number of combinational cells:              0
+Number of sequential cells:                 5
+Number of macros/black boxes:               0
+Number of buf/inv:                          0
+Number of references:                       2
+
+Combinational area:                  0.000000
+Buf/Inv area:                        0.000000
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:            1960.009827
+
+Total cell area:                     0.000000
+Total area:                       1960.009827
+
+Information: This design contains black box (unknown) components. (RPT-8)
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  --------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-    Noncombi-  Black-
+                                  Total      Total    national  national   boxes   Design
+--------------------------------  ---------  -------  --------  ---------  ------  ---------
+traffic_system                       0.0000      0.0    0.0000     0.0000  0.0000  traffic_system
+--------------------------------  ---------  -------  --------  ---------  ------  ---------
+Total                                                   0.0000     0.0000  0.0000
+
+1

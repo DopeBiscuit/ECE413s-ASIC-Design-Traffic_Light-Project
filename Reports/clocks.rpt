@@ -1,0 +1,21 @@
+Warning: Design 'traffic_system' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : clocks
+Design : traffic_system
+Version: K-2015.06
+Date   : Wed Dec 18 02:16:27 2024
+****************************************
+
+Attributes:
+    d - dont_touch_network
+    f - fix_hold
+    p - propagated_clock
+    G - generated_clock
+    g - lib_generated_clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+clk            100.00   {0 50}              d         {clk}
+--------------------------------------------------------------------------------
+1
